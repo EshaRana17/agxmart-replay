@@ -1,20 +1,20 @@
-# agenticmart-replay
+# agxmart-replay
 
-agenticmart-replay reads an [agenticmart-guard](https://github.com/EshaRana17/agenticmart-guard) JSONL log and writes a plain-English incident report in Markdown.
+agxmart-replay reads an [agxmart-guard](https://github.com/EshaRana17/agxmart-guard) JSONL log and writes a plain-English incident report in Markdown.
 
 It has no runtime dependencies and needs Node 20 or newer.
 
 ## Install
 
 ```sh
-npx github:EshaRana17/agenticmart-replay report guard.jsonl
+npx github:EshaRana17/agxmart-replay report guard.jsonl
 ```
 
 ## Usage
 
 ```sh
-agenticmart-replay report <guard.jsonl> [--json]
-agenticmart-replay incident <guard.jsonl> --id <n> [--json]
+agxmart-replay report <guard.jsonl> [--json]
+agxmart-replay incident <guard.jsonl> --id <n> [--json]
 ```
 
 Entry numbers are line numbers in the log and are shown in the report timeline. `incident` works on blocked entries.
@@ -22,7 +22,7 @@ Entry numbers are line numbers in the log and are shown in the report timeline. 
 Real output from a test run, trimmed where marked:
 
 ```text
-$ agenticmart-replay report guard.jsonl
+$ agxmart-replay report guard.jsonl
 # Guard log report
 
 ## Summary
@@ -38,7 +38,7 @@ $ agenticmart-replay report guard.jsonl
 
 [trimmed]
 
-$ agenticmart-replay incident guard.jsonl --id 7
+$ agxmart-replay incident guard.jsonl --id 7
 # Incident: entry #7
 
 ## What happened
@@ -92,4 +92,4 @@ node --test
 
 MIT
 
-Developed by [buildwithesha.web.app](https://buildwithesha.web.app/) for [AgenticMart](https://agenticmart.org)
+Developed by [buildwithesha.web.app](https://buildwithesha.web.app/) for [AGXMart](https://agxmart.com)

@@ -1,8 +1,8 @@
 import { buildIncident, buildReport, readLog, renderIncident, renderReport } from './replay.js';
 
 const USAGE = `usage:
-  agenticmart-replay report <guard.jsonl> [--json]
-  agenticmart-replay incident <guard.jsonl> --id <n> [--json]
+  agxmart-replay report <guard.jsonl> [--json]
+  agxmart-replay incident <guard.jsonl> --id <n> [--json]
 `;
 
 export function main(argv) {
@@ -36,7 +36,7 @@ export function main(argv) {
     }
     process.stdout.write(json ? `${JSON.stringify(data, null, 2)}\n` : text);
   } catch (e) {
-    process.stderr.write(`agenticmart-replay: ${e.message}\n`);
+    process.stderr.write(`agxmart-replay: ${e.message}\n`);
     process.exitCode = 2;
   }
 }

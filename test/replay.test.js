@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const BIN = path.join(here, '..', 'bin', 'agenticmart-replay.js');
+const BIN = path.join(here, '..', 'bin', 'agxmart-replay.js');
 
 function run(...args) {
   const r = spawnSync(process.execPath, [BIN, ...args], { encoding: 'utf8' });
@@ -39,7 +39,7 @@ test('report summarizes calls and rules in Markdown', () => {
   assert.match(r.stdout, /Tools hidden from lists: 1/);
   assert.match(r.stdout, /`maxIdenticalCalls`: 1/);
   assert.match(r.stdout, /\*\*#5\*\*/);
-  assert.match(r.stdout, /only what passed through agenticmart-guard/);
+  assert.match(r.stdout, /only what passed through agxmart-guard/);
 });
 
 test('report --json is parseable and matches', () => {
@@ -94,7 +94,7 @@ test('an empty log still produces a report', () => {
 });
 
 test('a missing file is an error', () => {
-  assert.equal(run('report', path.join(os.tmpdir(), 'nope-agenticmart.jsonl')).code, 2);
+  assert.equal(run('report', path.join(os.tmpdir(), 'nope-agxmart.jsonl')).code, 2);
 });
 
 test('server-chosen tool names cannot inject Markdown', () => {

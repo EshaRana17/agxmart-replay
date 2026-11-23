@@ -29,7 +29,7 @@ const RULES = {
   },
   toolChanged: {
     meaning: 'A tool description no longer matches the hash recorded in expectedTools.',
-    next: ['Compare a fresh baseline against the approved one with agenticmart-baseline diff.', 'Read the new description for instructions aimed at the model.', 'Check whether the server package or version changed since approval.'],
+    next: ['Compare a fresh baseline against the approved one with agxmart-baseline diff.', 'Read the new description for instructions aimed at the model.', 'Check whether the server package or version changed since approval.'],
   },
   unexpectedTool: {
     meaning: 'A tool appeared that is not in expectedTools.',
@@ -143,7 +143,7 @@ function counts(obj) {
   return rows.length ? rows.map(([k, v]) => `  - ${code(k)}: ${v}`).join('\n') : '  - none';
 }
 
-const SCOPE = 'This report covers only what passed through agenticmart-guard and was written to this log. It cannot show what a server did internally, and the log is a plain file that is not protected against editing.';
+const SCOPE = 'This report covers only what passed through agxmart-guard and was written to this log. It cannot show what a server did internally, and the log is a plain file that is not protected against editing.';
 
 export function renderReport(r) {
   const s = r.summary;
@@ -160,7 +160,7 @@ export function renderReport(r) {
   if (s.unreadableLines) parts.push(`- Unreadable log lines skipped: ${s.unreadableLines}`);
   parts.push('- Blocked calls by rule:', counts(s.blockedByRule), '- Blocked calls by tool:', counts(s.blockedByTool), '', '## Timeline', '');
   parts.push(r.timeline.length ? r.timeline.map(lineFor).join('\n') : 'The log has no readable entries.');
-  parts.push('', `Use \`agenticmart-replay incident <log> --id <n>\` with a blocked entry number for detail.`, '', '## Scope', '', SCOPE, '');
+  parts.push('', `Use \`agxmart-replay incident <log> --id <n>\` with a blocked entry number for detail.`, '', '## Scope', '', SCOPE, '');
   return parts.join('\n');
 }
 

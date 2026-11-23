@@ -1,10 +1,10 @@
 {
-  "name": "agenticmart-replay",
+  "name": "agxmart-replay",
   "version": "0.1.0",
-  "description": "Turn an agenticmart-guard JSONL log into a plain-English Markdown incident report.",
+  "description": "Turn an agxmart-guard JSONL log into a plain-English Markdown incident report.",
   "type": "module",
   "bin": {
-    "agenticmart-replay": "bin/agenticmart-replay.js"
+    "agxmart-replay": "bin/agxmart-replay.js"
   },
   "engines": {
     "node": ">=20"
@@ -14,6 +14,6 @@
   },
   "license": "MIT",
   "author": "Esha Sabir",
-  "repository": "github:EshaRana17/agenticmart-replay",
-  "homepage": "https://agenticmart.org"
+  "repository": "github:EshaRana17/agxmart-replay",
+  "homepage": "https://agxmart.com"
 }
