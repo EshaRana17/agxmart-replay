@@ -92,4 +92,4 @@ node --test
 
 MIT
 
-Developed by [buildwithesha.web.app](https://buildwithesha.web.app/) for [AGXMart](https://agxmart.com)
+Developed by [buildwithesha.web.app](https://buildwithesha.web.app/) for [AGXmart](https://agxmart.com)
